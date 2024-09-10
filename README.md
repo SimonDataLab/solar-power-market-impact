@@ -27,4 +27,4 @@ This repository contains an analysis of how increasing solar power production in
    pip install -r requirements.txt
 
 3. **Set up API Key:**
-To run the scripts, you need an API key from ENTSO-E. Replace 'your_api_key_here' in the Python scripts with your own API key.
+To run the scripts, you need an API key from ENTSO-E. Replace 'your_api_key_here' in the Python scripts with your own API key. To request this API key, register on the Transparency Platform and send an email to transparency@entsoe.eu with “Restful API access” in the subject line. Indicate the email address you entered during registration in the email body.
