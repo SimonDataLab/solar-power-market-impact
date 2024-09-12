@@ -1,11 +1,17 @@
-# Impact of Increasing Solar Power Production on Spot Power Market in Central Europe
+# Impact of Solar Power Growth on Spot Power Market Prices in Central Europe
 
-This repository contains an analysis of how increasing solar power production in Germany has impacted the spot power market prices in Central Europe, particularly focusing on countries like Germany, Czechia, and Slovakia. The analysis compares the daily peak vs. off-peak spot prices (in this analyisis by "peak" we mean 8am - 7pm and "off-peak" 0am - 7am and 8pm - 11pm **for any day - weekend included**) and investigates the correlation with solar power production. All the data was downloaded from ENTSO-E transparency platform. ChatGPT was used to help transform my thoughts into python code. 
+This repository explores how the rise in solar power production in Germany has influenced day-ahead spot power prices in Central Europe, with a focus on Germany, Czechia, and Slovakia. The analysis examines the relationship between daily peak and off-peak prices and solar power generation patterns.
 
-## Key Highlights
+**Important Note:** In this analysis, we define "peak" hours as 8 AM to 7:59 PM on all days of the week (including weekends). This differs from the standard industry definition, where peak hours typically refer to the same timeframe but only on weekdays (excluding weekends). We decided to include weekends as the solar production obviously is not impacted by the day of the week.
 
-- **Objective**: Analyze the correlation between increased solar capacity and power generation in Germany, and its effect on day-ahead spot prices in Central Europe.
-- **Data Source**: Data fetched from the ENTSO-E transparency platform using the `entsoe-py` API.
+All data used in this study was sourced from the ENTSO-E transparency platform, and Python code, partially developed with the assistance of ChatGPT, was used to process and analyze the data.
+
+## Key Insights
+
+- **Objective**: Investigate how increased solar capacity in Germany has influenced day-ahead spot power prices in Central Europe, with a special focus on daily peak and off-peak dynamics (Note: "peak" in this analysis refers to 8 AM to 7:59 PM, including weekends).
+- **Scope**: Focus on peak vs. off-peak price dynamics across Germany, Czechia, and Slovakia from 2019 to 2024.
+- **Data Source**: All data is sourced from the ENTSO-E transparency platform and processed using Python (entsoe-py API).
+- **Tools Used**: Python, pandas, matplotlib, and ChatGPT-assisted script development.
 
 ## Repository Structure
 
@@ -31,7 +37,7 @@ To run the scripts, you need an API key from ENTSO-E. Replace 'your_api_key_here
 
 ## Results
 
-1. **How peak-offpeak price dynamics changed over last 6 years?**
+1. **Changes in Peak vs. Off-Peak Price Dynamics (2019-2024)**
 
    The image below contains four charts:
       1. (chart 1) Historical day-ahead spot power prices.
@@ -40,9 +46,9 @@ To run the scripts, you need an API key from ENTSO-E. Replace 'your_api_key_here
 ![01_market_analysis](https://github.com/user-attachments/assets/a268c2de-e16d-4bd3-8bba-1e6e43ea5db6)
 2. **German solar production trend**
 
-   These two charts compare different types of electricity generation in Germany, highlighting the sharper increase in solar power in 2024. This is likely the primary driver of the changes in peak vs. off-peak price dynamics in central Europe, as solar generation has relatively low marginal costs. Czechia and Slovakia are also impacted due to market coupling and strong cross-border energy flows.  
+   The following charts highlight the rise in solar power generation, especially in 2024. As solar energy, with its low marginal costs, becomes more dominant, its influence on spot market prices is becoming more evident. This is also affecting nearby countries like Czechia and Slovakia due to market coupling and cross-border electricity flows.  
    
 ![02_solar_capacity_generation](https://github.com/user-attachments/assets/fb2513d9-6749-4125-8528-244c9ec23819)
-3. **This leads to another question.**
+3. **Further Questions**
 
-   Is this dynamics already transformed in forward base vs. peak products pricing? Stay tuned.
+   Is the shift in peak vs. off-peak dynamics already reflected in forward base vs. peak pricing? Stay tuned.
